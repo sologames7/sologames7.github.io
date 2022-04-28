@@ -482,7 +482,21 @@ document.addEventListener("DOMContentLoaded", function()
       moon[0].style.backgroundSize = "20% 40%";
       moon[0].style.backgroundPosition = "center";
     }
-
+    if(char == "sexe"){
+      console.log("joue l'audio la ptn de toi")
+      var audio = new Audio('./img/sex.m4a');
+      audio.play();
+    }
+    if(char == "cccc"){
+      console.log("joue l'audio la ptn de toi")
+      var audio = new Audio('./img/cc.m4a');
+      audio.play();
+    }
+    if(char == "njtm"){
+      console.log("joue l'audio la ptn de toi")
+      var audio = new Audio('./img/jtm.m4a');
+      audio.play();
+    }
     });
 
 });
