@@ -453,3 +453,30 @@ class App extends React.Component {constructor(...args) {super(...args);_defineP
 
 
 ReactDOM.render( /*#__PURE__*/React.createElement(App, null), document.getElementById('app'));
+
+
+
+
+document.addEventListener('keydown', logKey);
+var char ="";
+
+function logKey(e) {
+  console.log(e)
+  char+=`${e.key}`
+  console.log(char.length)
+  if(char.length >= 5){
+    char= char.slice(1,5)
+    console.log(char)
+  }
+
+  if(char == "nono"){
+    console.log("mtnCoeur")
+    let moon = document.getElementsByClassName("moon")
+    console.log(moon)
+    moon[0].style.background = "url('./img/nono2.png') 150% no-repeat";
+    moon[0].style.backgroundSize = "20% 40%";
+    moon[0].style.backgroundPosition = "center";
+    
+  }
+
+}
