@@ -1,19 +1,99 @@
 <!DOCTYPE html>
-<html lang="fr" >
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Souleman Moreau Portfolio</title>
-  <meta content="#181d23" name="theme-color" />
-  <meta content="IE=edge" http-equiv="X-UA-Compatible" />
-<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.3.1/css/all.css'><link rel="stylesheet" href="./style.css">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./img/logo.png">
+    <title>Développeur web freelance - Souleman Moreau</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div id="app"></div>
-<!-- partial -->
-  <script src='https://unpkg.com/react@16/umd/react.production.min.js'></script>
-<script src='https://unpkg.com/react-dom@16/umd/react-dom.production.min.js'></script><script  src="./script.js"></script>
-
+    <header>
+        <a href="#" id="logoContainer"><p id="logo">&#x3c;S&#x3e;</p></a>
+        <nav>
+            <a class="navLink" href="#realisations">Mes réalisations</a>
+            <a class="navLink" href="#services">Mes services</a>
+            <a class="navLink" href="#contact">Me contacter</a>
+        </nav>
+    </header>
+    <section class="sectionPresentation">
+        <img src="./img/profil.jpg" alt="photo de Souleman">
+        <div class="presantation">
+            <h1>Salut!&nbsp;<div id="phraseQuiBouge">Je m'appelle Souleman Moreau</div></h1>
+            <p>Développeur web freelance</p>
+            <p>Je suis en deuxième année de bachelor developpement web à epitech digital</p>
+            <p>Je cherche un <u>stage de 4 à 6 mois entre Mars et Septembre 2023.</u></p>
+            <p>Mes passe temps préférés sont le sport (boxe, culturisme, running), le gaming et la crypto.</p>
+        </div>
+    </section>
+    <section class="mesRealisations" id="realisations">
+        <h1>Mes réalisations</h1>
+        <div class="realisationsContainer">
+            <div class="realisationCard">
+                <h3>Site vitrine - BienChezSoi</h3>
+                <img src="./img/Free_MacBook_Pro_2.png" alt="image du projet (moke up)">
+                <p><i>Format: Desktop, Tablette, Mobile<br>Langage(s) utilisé(s): HTML5, CSS3, JavaScript</i></p>
+                <p>Site web réalisé dans le cadre de mes études (2022)</p>
+                <a href="">Voir le code</a>
+            </div>
+            <div class="realisationCard">
+                <h3>Application de réservation</h3>
+                <img src="./img/Free_iPhone_13_Mockup_2.png" alt="image du projet (moke up)">
+                <p><i>Format: Tablette, Mobile<br>Langage(s) utilisé(s): HTML5, CSS3, JavaScript, Php, MySql</i></p>
+                <p>Application de réservation automatisé d'une navette maritime en Corse. Réalisé durant mon stage de première année (2022) en autonomie.</p>
+                <a href="https://www.figma.com/file/jVgc7ByqBYy90X0SfL84k3/Untitled?node-id=0%3A1&t=1NXxGMfa2f5oGI9K-1" target="_blank" rel="noopener noreferrer">Visualiser la maquette</a>
+            </div> 
+            <div class="realisationCard">
+                <h3>API - Mise en forme de data </h3>
+                <img src="./img/Free_iMac_Mockup_1.png" alt="image du projet (moke up)">
+                <p><i>Format: Desktop<br>Langage(s) utilisé(s): Python</i></p>
+                <p>Une API montrant le taux d'isolation en Corse sous forme de carte dynamique de chaleur. Suivant comment l'API est appelé on peut quadriller une zone et donc cibler la donnée.</p>
+                <a href="https://github.com/sologames7/Api-Python">Voir le code</a>
+            </div>
+        </div>
+    </section>
+    <!-- <section class="mesServices" id="services">
+        <h1>Mes services</h1>
+        <div class="servicesContainer"></div>
+            <div class="serviceCard">
+                <div class="serviceNomEtPrix"><h3>Nom du service</h3><p>300€</p></div>
+                <img src="" alt="image du service (moke up)">
+                <p>Orci phasellus risus tristique gravida massa aliquet neque. Cursus in ultricies amet amet integer volutpat dolor.</p>
+                <a href="" class="boutonDevis">Demander un devis</a>
+            </div>
+            <div class="serviceCard">
+                <div class="serviceNomEtPrix"><h3>Nom du service</h3><p>300€</p></div>
+                <img src="" alt="image du service (moke up)">
+                <p>Orci phasellus risus tristique gravida massa aliquet neque. Cursus in ultricies amet amet integer volutpat dolor.</p>
+                <a href="" class="boutonDevis">Demander un devis</a>
+            </div>
+            <div class="serviceCard">
+                <div class="serviceNomEtPrix"><h3>Nom du service</h3><p>300€</p></div>
+                <img src="" alt="image du service (moke up)">
+                <p>Orci phasellus risus tristique gravida massa aliquet neque. Cursus in ultricies amet amet integer volutpat dolor.</p>
+                <a href="" class="boutonDevis">Demander un devis</a>
+            </div>
+        <div class="servicesContainer"></div>
+    </section> -->
+    <section id="contact" class="meContacter">
+        <h1 class="titleContactMe">CONTACTEZ MOI !</h1>
+        <div class="contactContainer">
+            <a href="mailto:moreau.solo11@gmail.com" class="contact">
+                <img class="logoContact" src="./img/email.png" alt="logoPlateforme">
+                <p>moreau.solo11@gmail.com</p>
+            </a>
+            <a href="https://www.linkedin.com/in/souleman-moreau-b90aa8229/" target="_blank" rel="noopener noreferrer" class="contact">
+                <img class="logoContact" src="./img/linkedin.png"  alt="logoPlateforme">
+                <p>Souleman Moreau</p>
+            </a>
+            <a href="tel:+33761702343" class="contact">
+                <img class="logoContact" src="./img/call.png" alt="logoPlateforme">
+                <p>+33 7 61 70 23 43</p>
+            </a>
+        </div>
+    </section>
+    <footer>SOULEMAN MOREAU - COPYRIGHT &copy; 2022</footer>
+    <script src="script.js"></script>
 </body>
 </html>

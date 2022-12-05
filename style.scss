@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+:root {
+    --main-bg-color: #161616;
+  }
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-behavior: smooth;
+    background-color: var(--main-bg-color);
+}
+html{
+    scroll-behavior: smooth;
+}
+header{
+    margin-top: 55px;
+    transition: 0.2s;
+    z-index: 1000;
+    position: fixed;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    height: 80px;
+    width: 70vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15vw;
+    padding-right: 15vw;
+    background-color: #202020 ;
+    nav{
+        display: flex;
+        gap: 30px;
+
+        a{
+            color: white;
+            text-decoration: none;
+            
+            &:hover{
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.sectionPresentation{
+    color: white;
+    background-color: #161616;
+    padding-top: 70px;
+    gap: 50px;
+    width: 70%;
+    height: 550px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    h1{
+        display: flex;
+    }
+    .presantation{
+        width: 50%;
+    }
+    img{
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        height: 300px;
+        border-radius: 200px;
+    }
+}
+
+.mesRealisations{
+    padding-left: 15vw;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    padding-right: 15vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    .realisationsContainer{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .realisationCard{
+            width: 30%;
+        }
+    }
+    img{
+        max-width: 100%;
+    }
+}
+
+#phraseQuiBouge{
+    position: absolute;
+    margin-left: 80px;
+    
+}
+@keyframes phrase{
+    0%{
+        opacity: 0;
+        transform: scaleY(0%);
+    }
+    20%{
+        opacity: 1;
+        transform: scaleY(100%);
+    }
+    90%{
+        opacity: 1;
+        transform: scaleY(100%);
+    }
+    100%{
+        opacity: 0;
+        transform: scaleY(0%);
+    }
+}
+
+#logo{
+    font-size: 40px;
+    color: white;
+    
+}
+
+#logoContainer{
+    text-decoration: none;
+}
+
+.meContacter{
+    border-top: solid black 2px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: calc(100% - 2*100px);
+    gap:70px;
+    .contactContainer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        .contact{
+            color: black;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            .logoContact{
+                transition: 0.3s;
+                width: 50px;
+                &:hover{
+                    width: 70px;
+                }
+            }
+        }
+    }   
+}
+
+.titleContactMe{
+    font-size: 50px;
+    margin: 0;
+}
+
+footer{
+    height: 50px;
+    color: gray;
+    display: flex;
+    align-items: center;
+}
