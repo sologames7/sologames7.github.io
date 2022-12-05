@@ -15,6 +15,9 @@ html{
     scroll-behavior: smooth;
 }
 header{
+    #menuBurger{
+        display: none;
+    }
     margin-top: 55px;
     transition: 0.2s;
     z-index: 1000;
@@ -41,6 +44,26 @@ header{
             }
         }
     }
+    @media (max-width: 762px) {
+        nav{
+            display: none;
+        }
+        #menuBurger{
+            display: block;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            div{
+                border-radius: 2px;
+                width: 100%;
+                height: 10%;
+                background-color: white;
+            }
+        }
+
+    }
 }
 
 .sectionPresentation{
@@ -49,7 +72,7 @@ header{
     padding-top: 70px;
     gap: 50px;
     width: 70%;
-    height: 550px;
+    min-height: 550px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -64,6 +87,39 @@ header{
         box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
         height: 300px;
         border-radius: 200px;
+    }
+    #phraseQuiBouge{
+        position: absolute;
+        margin-left: 80px;
+        
+    }
+    @media (max-width: 762px) {
+        margin-bottom: 20px;
+        p{
+            margin: 10px;
+        }
+        width: 90%;
+        h1{
+            width: 100%;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        img{
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+            height: 150px;
+            border-radius: 200px;
+            margin-top: 100px;
+        }
+        #phraseQuiBouge{
+            margin-left: 0px;
+            position: static;
+        }
+        .presantation{
+            width: 100%;
+        }
+        flex-direction: column;
     }
 }
 
@@ -86,13 +142,22 @@ header{
     img{
         max-width: 100%;
     }
+    @media (max-width: 762px) {
+        padding-left: 10%;
+        .realisationsContainer{
+            display: flex;
+            flex-direction: column;
+            .realisationCard{
+                width: 100%;
+                margin-bottom: 30px;
+                padding-bottom: 30px;
+                border-bottom: solid black 10px;
+            }
+        }
+    }
 }
 
-#phraseQuiBouge{
-    position: absolute;
-    margin-left: 80px;
-    
-}
+
 @keyframes phrase{
     0%{
         opacity: 0;
@@ -154,7 +219,18 @@ header{
                 }
             }
         }
-    }   
+    } 
+    @media (max-width: 762px) {
+        h1{
+            width: 100%;
+            font-size: 20px;
+            text-align: center;
+        }
+        .contactContainer{
+            display: flex;
+            flex-direction: column;
+        }
+    }  
 }
 
 .titleContactMe{
@@ -167,4 +243,7 @@ footer{
     color: gray;
     display: flex;
     align-items: center;
+    @media (max-width: 762px) {
+        font-size: 10px;
+    }
 }

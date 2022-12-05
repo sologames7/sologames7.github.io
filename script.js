@@ -17,10 +17,12 @@ function startMoving() {
 }
 
 startMoving()
+
 let header = document.getElementsByTagName("header")
 let navLinks = document.getElementsByClassName("navLink")
 let lastKnownScrollPosition = 0;
 let logo = document.getElementById("logo")
+let spans = document.getElementsByClassName("mbSpan")
 
 document.addEventListener('scroll', (e) => {
     lastKnownScrollPosition = window.scrollY;
@@ -32,6 +34,9 @@ document.addEventListener('scroll', (e) => {
         navLinks[1].style.color = 'black'
         navLinks[2].style.color = 'black'
         logo.style.color = "black"
+        spans[0].style.backgroundColor = "black"
+        spans[1].style.backgroundColor = "black"
+        spans[2].style.backgroundColor = "black"
     }else{
         header[0].style.backgroundColor = "#202020"
         header[0].style.marginTop = "55px"
@@ -39,6 +44,10 @@ document.addEventListener('scroll', (e) => {
         navLinks[1].style.color = 'white'
         navLinks[2].style.color = 'white'
         logo.style.color = "white"
+        spans[0].style.backgroundColor = "white"
+        spans[1].style.backgroundColor = "white"
+        spans[2].style.backgroundColor = "white"
+
         
     }
   });
