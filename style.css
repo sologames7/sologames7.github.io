@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 :root {
   --main-bg-color: #161616;
@@ -267,5 +268,47 @@ footer {
 @media (max-width: 762px) {
   footer {
     font-size: 10px;
+  }
+}
+
+.menuDéroulant {
+  position: fixed;
+  z-index: 2000;
+  height: 100vh;
+  background-color: #202020;
+  width: 70vw;
+  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  transform: translateX(100%);
+}
+
+.menuDéroulant a {
+  color: white;
+  text-decoration: none;
+}
+
+.menuDéroulant img {
+  width: 50px;
+}
+
+@keyframes openMenu {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes closeMenu {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
   }
 }

@@ -51,3 +51,20 @@ document.addEventListener('scroll', (e) => {
         
     }
   });
+
+// menu déroulant
+let menuBurgerOpen = document.getElementById("menuBurger")
+let menuBurgerClose = document.getElementById("closeMenu")
+let menuDeroulant = document.getElementById("menuDeroulant")
+
+menuBurgerOpen.addEventListener('click', ()=>{
+    menuDeroulant.style.animation = "openMenu 0.5s ease"
+    menuDeroulant.style.transform = "translateX(0%)"
+})
+
+menuBurgerClose.addEventListener('click', ()=>{
+    menuDeroulant.style.animation = "closeMenu 0.5s ease"
+    menuDeroulant.style.transform = "translateX(100%)"
+
+})
+// 
