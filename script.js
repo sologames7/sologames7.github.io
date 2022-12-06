@@ -67,4 +67,14 @@ menuBurgerClose.addEventListener('click', ()=>{
     menuDeroulant.style.transform = "translateX(100%)"
 
 })
+
+let burgerLinks = document.getElementsByClassName("navLinkMenu")
+
+for (let index = 0; index < burgerLinks.length; index++) {
+    burgerLinks[index].addEventListener('click', ()=>{
+        menuDeroulant.style.animation = "closeMenu 0.5s ease"
+        menuDeroulant.style.transform = "translateX(100%)"
+    })
+    
+}
 // 
