@@ -1,17 +1,23 @@
 let phrase = document.getElementById("phraseQuiBouge")
 function startMoving() {
     timer = setInterval(function() {
+        let color = ""
         let sentenceToShow = ""
         if (phrase.innerHTML == "Je m'appelle Souleman Moreau"){
             sentenceToShow = "J'ai 19 ans"
+            color= "red"
         }else if(phrase.innerHTML == "J'ai 19 ans"){
             sentenceToShow = "Je suis sur Lyon"
+            color= "blue"
         }else if(phrase.innerHTML == "Je suis sur Lyon"){
             sentenceToShow = "Je m'appelle Souleman Moreau"
+            color="green"
         }
         phrase.style.zIndex= '0'
         phrase.style.animation = "phrase 4s infinite"
         phrase.innerHTML = sentenceToShow
+        phrase.style.color = color
+        phrase.style.fontWeight = "bolder"
         
     }, 4000);
 }
@@ -26,7 +32,6 @@ let spans = document.getElementsByClassName("mbSpan")
 
 document.addEventListener('scroll', (e) => {
     lastKnownScrollPosition = window.scrollY;
-  
     if (lastKnownScrollPosition > 50) {
         header[0].style.marginTop = "0px"
         header[0].style.backgroundColor = "white"
@@ -46,9 +51,20 @@ document.addEventListener('scroll', (e) => {
         logo.style.color = "white"
         spans[0].style.backgroundColor = "white"
         spans[1].style.backgroundColor = "white"
-        spans[2].style.backgroundColor = "white"
-
-        
+        spans[2].style.backgroundColor = "white"   
+    }
+    let imgHand = document.getElementById('phoneHand')
+    let skillIcons = document.getElementsByClassName('skillIcon')
+    console.log(skillIcons);
+    if(lastKnownScrollPosition > 1100){
+        imgHand.style.animation = 'upHand 2s ease'
+        imgHand.style.transform = 'translateY(0)'
+    }
+    if(lastKnownScrollPosition > 1250){
+        for (let index = 0; index < skillIcons.length; index++) {
+            skillIcons[index].style.animation = 'fondu 2s ease'
+            skillIcons[index].style.opacity = '1' 
+        }
     }
   });
 
